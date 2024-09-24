@@ -1,8 +1,18 @@
 Python Roadmap: 
 This repository documents my journey through a structured roadmap to become an expert in Python, covering everything from basic concepts to advanced programming techniques. The goal is to not only master the language but also explore areas like Data Science, Machine Learning, and application development.
 
-Roadmap Structure
-Introduction to Python
+Roadmap Structure:
+#1 - Basics
+    -> Google Python Class
+
+
+
+
+
+
+
+
+
 
 Fundamentals of the language, syntax, variables, control structures, functions, etc.
 Intermediate Python
