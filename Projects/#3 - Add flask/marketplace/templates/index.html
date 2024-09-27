@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+</head>
+<body>
+    <h1>Marketplace</h1>
+
+    <form action="{{ url_for('add_product') }}" method="POST">
+        <input type="text" name="name" placeholder="Product name" required>
+        <input type="number" step="0.01" name="price" placeholder="Price" required>
+        <input type="number" name="quantity" placeholder="Stock" required>
+        <input type="text" name="description" placeholder="Description" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <h2>Products</h2>
+    <ul>
+        {% for product in products %}
+        <li>
+            {{ product.name }} - ${{ product.price }} (Quantity: {{ product.quantity }})<br>
+            <strong>Description:</strong> {{ product.description }}<br>
+            <a href="{{ url_for('remove_product', name=product.name) }}">Remove</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
